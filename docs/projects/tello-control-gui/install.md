@@ -2,30 +2,30 @@ icon:fontawesome/solid/gear
 
 This section provides a guide to install and configure the environment required to run the DJI Tello control on Raspberry Pi 4. It covers dependency installation, ROS 2 Humble setup, and development environment configurations. 
 
-## 1.0 System Requirements
+## System Requirements
 
-### 1.1 Hardware Requirements
+### Hardware Requirements
 * Raspberry Pi 4 (8GB RAM)
 * Storage: 32 GB microSD card (Class 10)
 * DJI Tello Drone
 
-### 1.2 Software Requirements
+### Software Requirements
 * Operating System: Ubuntu 22.04 LTS (64-bit, ARM)
 * Python: 3.10
 * ROS 2: Humble Hawksbill distribution
 * Additional: Git, pip, Python virtual environment
 
-## 2.0 Environment Setup
-### 2.1 Update the system
+## Environment Setup
+### Update the system
 ```bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y curl wget git python3-pip
 ```
-### 2.2 ROS 2 Humble Installation
+### ROS 2 Humble Installation
 To install ROS 2 Humble fallow the instructions of the next web page: 
 [ROS 2 Humble installation!](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html "ROS 2 Humble")
 
-### 2.3 Creating a Python virtual environment 
+### Creating a Python virtual environment 
 To verify if **virtualenv** is ready installed, run: 
 ```bash
 virtualenv --version
@@ -99,7 +99,7 @@ export PYTHONPATH=${PYTHONPATH}:/path-to-your-env/lib/python3.10/site-packages
     > ![edit-activate-file](img/install/gedit.png "edit-activate-file")
     > Edit activate file
 
-## 3.0 Project Cloning and Initialization
+## Project Cloning and Initialization
 clone the repository into your drone_simple_gui_ws workspace: 
 ```bash
 git clone https://github.com/LichtenbergCode/tello-gui-controller-ros2.git
@@ -126,8 +126,8 @@ Run the app:
 ros2 launch simple_gui_bringup simple_gui.launch.xml
 ```
 
-## 4.0 Troubleshooting 
-### 4.1 Tello Connection Problems
+## Troubleshooting 
+### Tello Connection Problems
 !!! failure "**Issue: Cannot connect ro Tello drone**"
     Check WiFi connection: 
     ```bash
@@ -142,3 +142,4 @@ ros2 launch simple_gui_bringup simple_gui.launch.xml
     ```bash
     sudo systemctl restart NetworkManager
     ```
+
