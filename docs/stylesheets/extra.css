@@ -86,3 +86,46 @@ img {
   color: var(--md-default-fg-color);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
 }
+
+
+/* 📱 RESPONSIVE DESIGN */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .project-card {
+    width: 80%;
+    padding: 1.5rem;
+  }
+
+  .project-container {
+    gap: 1.5rem;
+  }
+}
+
+/* Teléfonos */
+@media (max-width: 600px) {
+  .project-card {
+    width: 100%;
+    padding: 1.2rem;
+  }
+
+  .project-card h2 {
+    font-size: 1.25rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
+
+  .custom-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .project-container img {
+    margin-right: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
