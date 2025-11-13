@@ -3,8 +3,6 @@ icon:octicons/graph-16
 # DJI Tello Altitude PID Controller
 This project provides a real-time altitude control system for the DJI Tello drone, running on a **Raspberry Pi 4**. It implements a Proportional-Integral-Derivative (PID) controller to maintain stable flight at a desired height. The system leverages **DJITellopy** for reliable low-level communication with the drone, **ROS 2** for robust, node-based inter-process communication on the Pi, and features a graphical user interface (GUI) built with **Customtkinter** for intuitive control and real-time visualization of key flight parameters using **Matplotlib**.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/Y__p31fQ2m4?si=vg4Dmn6pUxaDImzo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ## Introduction 
 This project is a complete embedded control system designed to demonstrate closed-loop altitude control for the DJI Tello micro-drone. The core motivation is to create a practical, educational platform that bridges the gap between theoretical control systems and real-world robotics deployment, showcasing how a Raspberry Pi 4 can act as an onboard brain for autonomous drone operations. It addresses the need for a customizable and analyzable control system by replacing the drone's built-in altitude hold with a custom PID controller, providing a foundational block for more complex autonomous behaviors. By integrating ROS 2 for modularity, a modern GUI for interaction, and real-time data visualization for analysis. The system is currently in a stable prototype stage, with all core functionalities—including flight control, visualization, and user interface—fully operational on the Raspberry Pi platform.
 
@@ -40,5 +38,6 @@ This project is a complete embedded control system designed to demonstrate close
 * **Modern Graphical User Interface**: A user-friendly interface built with Customtkinter, optimazed for use on the Raspberry Pi's display.
 
 ## System Summary
+
 
 The system is built primarily with Python on a **Raspberry Pi 4** running a Linux-based OS (Ubuntu 22.04 LTS). It utilizes key software frameworks: **ROS 2** (Humble) for inter-process communication on the Pi, **DJITellopy** as the core drone SDK, **Customtkinter** for the graphical interface, and **Matplotlib** for dynamic plotting. At a high level, the Raspberry Pi hosts all components: it connects to the Tello's WiFi network, and then runs the GUI, PID controller, and DJITellopy interface as separate ROS 2 nodes. The PID node subscribes to the drone's altitude data (provided by a DJITellopy wrapper node), calculates the control output, and publishes commands, which the DJITellopy node sends to the drone. All data is visualized in real-time on the GUI displayed on the Pi.
