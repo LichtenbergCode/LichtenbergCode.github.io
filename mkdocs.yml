@@ -1,0 +1,168 @@
+site_name: Embedded AI Robotics Lab
+site_description: A projects documentation and a blogging site
+site_url: https://lichtenbergcode.github.io/
+docs_dir: docs # Obsidian Vault
+
+# Custom Homepage Elements
+home_cover_image: img/MyRobot.png # This path starts at your root mkdocs directory.
+home_tagline: Robotics & AI Embedded Systems Documentation
+home_description: |
+  This site contains structured documentation for my robotics, embedded control and applied AI projects. The goal is to provide clear and reproducible technical references.
+
+# Gradient Color
+home_gradient_hsla: var(--md-accent-fg-color) # hsla(160deg,47%,55%,1) # Default Green: hsla(160deg,47%,55%,1)
+
+# Custom Homepage Button(s)
+home_button1_name: Main Clicky                   # Comment this parameter out to remove the button.
+home_button1_url: Folder1/                       # This path starts at your root mkdocs directory.
+home_button1_theme: md-button md-button--primary # Options: "md-button", "md-button md-button--primary"
+home_button1_icon: people                        # Options: "people", "gear", "image"
+home_button1_blurb: |                            # Short description of this button / section.
+  This joker navigates to the shadow wizard armory located in "/Folder1/index.md"
+
+home_button2_name: Clicky 2   # Comment this parameter out to remove the button.
+home_button2_url: Folder2/    # This path starts at your root mkdocs directory.
+home_button2_theme: md-button # Options: "md-button", "md-button md-button--primary"
+home_button2_icon: gear       # Options: "people", "gear", "image"
+home_button2_blurb: |         # Short description of this button / section.
+  This goober navigates to some important thingies located in "/Folder2/index.md"
+
+home_button3_name: Clicky 3   # Comment this parameter out to remove the button.
+home_button3_url: Folder3/    # This path starts at your root mkdocs directory.
+home_button3_theme: md-button # Options: "md-button", "md-button md-button--primary"
+home_button3_icon: image      # Options: "people", "gear", "image"
+home_button3_blurb: |         # Short description of this button / section.
+  This psycho navigates to an interesting table of stuff located in "/Folder3/index.md"
+
+# Homepage Code Execution
+home_execute_js: | # Javascript to execute when accessing the homepage
+
+nav: 
+    - Home: index.md
+    #- About: about.md 
+
+    #icon: fontawesome/solid/user
+    #- My Blog Entries: blog.md
+    #- Blog: 
+    #    - What is robotics?: blog/what-is-robotics.md
+    - projects:
+        - 'Start Here': projects/index.md
+        - 'tello-leader-follower-scheme':
+            - 'Overview': projects/tello-leader-follower-scheme/tello-leader-follower-scheme.md
+            - 'Installation': projects/tello-leader-follower-scheme/install.md
+            - 'User guide': projects/tello-leader-follower-scheme/user-guide.md
+            #- 'Features': projects/tello-leader-follower-scheme/features.md
+            #- 'Functionalities': projects/tello-leader-follower-scheme/functionalities.md
+
+        - 'tello-pid-altitude':
+            - 'Overview': projects/tello-pid-altitude/tello-pid-altitude-control.md
+            - 'Installation': projects/tello-pid-altitude/install.md
+            - 'User guide': projects/tello-pid-altitude/user-guide.md
+            #- 'Features': projects/tello-pid-altitude/features.md
+            #- 'Functionalities': projects/tello-pid-altitude/functionalities.md
+            #- 'Architecture': projects/tello-pid-altitude/architecture.md
+
+        - 'tello-user-control':
+            - 'Overview': projects/tello-control-gui/tello-control-gui.md
+            - 'Installation': projects/tello-control-gui/install.md
+            - 'User guide': projects/tello-control-gui/user-guide.md
+            #- 'Features': projects/tello-control-gui/features.md
+            #- 'Functionalities': projects/tello-control-gui/functionalities.md
+            #- 'Architecture': projects/tello-control-gui/architecture.md
+
+theme: 
+    name: material
+    languages: es
+    custom_dir: assets
+    font: 
+      text: Merriweather Sans
+      code: Red Hat Mono
+    icon: 
+        logo: fontawesome/solid/robot
+    favicon: img/robot-head.ico
+    features: 
+        - content.code.annotate
+        - content.code.copy
+        - content.tabs.link
+        - header.autohide
+        - announce.dismiss
+        - navigation.footer
+        - navigation.indexes
+      #  - navigation.sections
+      #  - navigation.instant
+        - navigation.tabs
+        - navigation.top
+      #  - navigation.expand
+        - navigation.tracking 
+        - search.highlight
+        - search.share
+        - search.suggest
+    
+    palette: 
+        - scheme: slate
+          primary: black
+          accent: indigo 
+          toggle:
+              icon: material/weather-night
+              name: Switch to light mode 
+        
+        - scheme: default
+          primary: black
+          accent: teal
+          toggle:
+              icon: material/weather-sunny
+              name: Switch to dark mode
+extra_css:
+    - stylesheets/extra.css
+
+plugins: 
+    - search
+    - include-markdown
+    - mermaid2
+    #- video
+    - blog:
+        blog_dir: .
+        blog_toc: true
+        active_date_format: yyyy
+        active_url_date_formar: yyyy
+        categories_allowed:
+          - Tech
+          - ROS 2
+          - Drone Control
+        post_url_format: "{slug}"
+
+    
+    - tags:
+        tags_file: tags.md
+extra: 
+    social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/LichtenbergCode
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/albertolombera21/
+
+markdown_extensions: 
+    - pymdownx.highlight: 
+        anchor_linenums: true 
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - admonition
+    - pymdownx.arithmatex:
+        generic: true 
+    - footnotes
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+    - pymdownx.mark
+    - attr_list
+    - pymdownx.emoji: 
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+
+copyright: |
+    &copy; 2025 <a href="https://github.com/LichtenbergCode" target="_blank" rel="noopener">Alberto Lombera</a>
+
+
+
+
+

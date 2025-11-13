@@ -1,0 +1,88 @@
+
+
+/*Custom Colors*/
+/*:root {
+  --md-primary-fg-color: #1a237e;
+  --md-accent-fg-color: #ff4081;
+  --md-default-bg-color: #c8c1c1ef;
+  --md-inner-box: #ab3333ef;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #bb86fc;
+  --md-accent-fg-color: #03dac6;
+  --md-default-bg-color: #c8c1c1ef;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #bb86fc;
+  --md-accent-fg-color: #03dac6;
+  --md-default-bg-color: #454545;
+}*/
+
+/*Overwrite*/
+
+/* 🩶 Estilos generales (modo claro por defecto) */
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+img {
+    margin-right: 20px; /* Espacio a la derecha */
+    margin-bottom: 10px;
+}
+
+.project-card {
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 630px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+.project-card h2 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.custom-btn {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: var(--md-accent-fg-color);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* 🌑 Estilos específicos para modo oscuro */
+[data-md-color-scheme="slate"] .custom-hero {
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}

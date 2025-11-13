@@ -1,0 +1,1 @@
+icon:material/newspaper-variant-multiple

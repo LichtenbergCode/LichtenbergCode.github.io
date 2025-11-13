@@ -1,0 +1,1 @@
+icon:fontawesome/solid/project-diagram
