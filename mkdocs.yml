@@ -45,7 +45,7 @@ nav:
     #- My Blog Entries: blog.md
     #- Blog: 
     #    - What is robotics?: blog/what-is-robotics.md
-    - projects:
+    - Projects:
         - 'Start Here': projects/index.md
         - 'tello-leader-follower-scheme':
             - 'Overview': projects/tello-leader-follower-scheme/tello-leader-follower-scheme.md
@@ -53,7 +53,6 @@ nav:
             - 'User guide': projects/tello-leader-follower-scheme/user-guide.md
             #- 'Features': projects/tello-leader-follower-scheme/features.md
             #- 'Functionalities': projects/tello-leader-follower-scheme/functionalities.md
-
         - 'tello-pid-altitude':
             - 'Overview': projects/tello-pid-altitude/tello-pid-altitude-control.md
             - 'Installation': projects/tello-pid-altitude/install.md
@@ -61,7 +60,6 @@ nav:
             #- 'Features': projects/tello-pid-altitude/features.md
             #- 'Functionalities': projects/tello-pid-altitude/functionalities.md
             #- 'Architecture': projects/tello-pid-altitude/architecture.md
-
         - 'tello-user-control':
             - 'Overview': projects/tello-control-gui/tello-control-gui.md
             - 'Installation': projects/tello-control-gui/install.md
@@ -69,6 +67,17 @@ nav:
             #- 'Features': projects/tello-control-gui/features.md
             #- 'Functionalities': projects/tello-control-gui/functionalities.md
             #- 'Architecture': projects/tello-control-gui/architecture.md
+    - 'Dev Notes':
+        - 'Linear Algebra':
+            - 'Overview': dev-notes/linear-algebra/overview.ipynb
+            - 'Vectors': dev-notes/linear-algebra/vectors.ipynb
+            - 'Vectors applied': dev-notes/linear-algebra/vectors_applied.ipynb
+            - 'Matrix': dev-notes/linear-algebra/matrix.ipynb
+            - 'Matrix applied': dev-notes/linear-algebra/matrix_applied.ipynb
+            #- etc...
+        - 'Statistics':
+            - 'Overview': dev-notes/statistics/overview.ipynb
+
 
 theme: 
     name: material
@@ -119,6 +128,7 @@ plugins:
     - search
     - include-markdown
     - mermaid2
+    - mkdocs-jupyter
     #- video
     - blog:
         blog_dir: .

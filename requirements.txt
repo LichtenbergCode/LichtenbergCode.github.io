@@ -13,6 +13,7 @@ mkdocs-rss-plugin==1.16.0
 mkdocs-git-revision-date-localized-plugin==1.4.7
 mkdocs-macros-plugin==1.4.0
 mkdocs-gen-files==0.5.0
+mkdocs-jupyter==0.25.1
 
 # Opcionales (si los usas)
 mkdocs-simple-blog==0.2.0
@@ -29,3 +30,6 @@ requests==2.32.3
 lxml==6.0.2
 watchdog==6.0.0
 
+# Tools
+numpy==2.3.4
+matplotlib==3.10.7
