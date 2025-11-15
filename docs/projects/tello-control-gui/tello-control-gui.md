@@ -42,18 +42,3 @@ This project delivers a user-friendly basic control interface for the DJI Tello 
 ## System Summary
 
 The System leverages **Python** with **Ttkbootstrap** for the graphical interface, **ROS 2 Humble** for inter-process communication, and DJITellopy for low-level drone control, all running on **Ubuntu 22.04** on a **Raspberry Pi 4**. The architecture consists of two main components: a GUI node handling user input and display and a communication node managing drone connectivity. These components interact through ROS 2 topics and services, ensuring real-time responsiveness while maintaining system stability and modularity. 
-
-## Repository Contents
-
-project/
-├── docs/
-│   ├── Overview.md
-│   ├── Installation.md
-│   ├── UserGuide.md
-│   ├── Features.md
-│   ├── Functionalities.md
-│   └── Architecture.md
-├── src/
-├── config/
-└── docker/
- 
