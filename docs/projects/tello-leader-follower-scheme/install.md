@@ -104,11 +104,6 @@ source install/setup.bash
     source drone_det_itfc/install/setup.bash
     ```
 
-### Create a Python Virtual environment and the Workspace of the project
-Create The workspace: 
-```bash
-```
-
 ### Hailo-8 AI Acceletor module Integration
 
 #### Hailo-8 Overview
