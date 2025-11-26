@@ -77,7 +77,8 @@ nav:
             #- etc...
         - 'Statistics':
             - 'Overview': dev-notes/statistics/overview.ipynb
-
+        - 'Control Theory': 
+            - 'Overview': dev-notes/control-Theory/overview.md
 
 theme: 
     name: material
