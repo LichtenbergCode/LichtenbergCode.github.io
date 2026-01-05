@@ -72,123 +72,124 @@ abc = [1, 2, 3, 4, 5] # Python list (dynamic array)
 | Memory allocation | Once         | Multiple times              |
 | Contiguous memory | Yes          | Yes                         |
 | Access time       | O(1)         | O(1)                        |
-| Append            | ❌            | O(1) amortized              |
+| Append            | ❌           | O(1) amortized             |
 | Memory overhead   | Minimal      | Extra capacity              |
 | Example           | `int a[10]`  | Python `list`, C++ `vector` |
 
 
 ### Python List operation 
 
-```python
-# create a list 
-abc = [i for i in range(1, 6)] # O(n) -> creating a list takes n assignments
+??? example "Python List Operations"
+    ```python
+    # create a list 
+    abc = [i for i in range(1, 6)] # O(n) -> creating a list takes n assignments
 
-# ===============================
-# ACCESS
-# ===============================
+    # ===============================
+    # ACCESS
+    # ===============================
 
-x = abc[0]                       # O(1) → direct index access
-y = abc[-1]                      # O(1)
+    x = abc[0]                       # O(1) → direct index access
+    y = abc[-1]                      # O(1)
 
-# ===============================
-# SEARCH
-# ===============================
+    # ===============================
+    # SEARCH
+    # ===============================
 
-3 in abc                         # O(n) → linear search
-abc.index(4)                     # O(n)
+    3 in abc                         # O(n) → linear search
+    abc.index(4)                     # O(n)
 
-# ===============================
-# INSERTION
-# ===============================
+    # ===============================
+    # INSERTION
+    # ===============================
 
-abc.append(6)                    # O(1) amortized → add at the end
-abc.insert(0, 0)                 # O(n) → shifts elements
-abc.extend([7, 8, 9])             # O(k) → k elements added
+    abc.append(6)                    # O(1) amortized → add at the end
+    abc.insert(0, 0)                 # O(n) → shifts elements
+    abc.extend([7, 8, 9])             # O(k) → k elements added
 
-# ===============================
-# DELETION
-# ===============================
+    # ===============================
+    # DELETION
+    # ===============================
 
-abc.pop()                        # O(1) → remove last element
-abc.pop(0)                       # O(n) → shifts elements
-abc.remove(3)                    # O(n) → search + shift
-del abc[2]                       # O(n)
+    abc.pop()                        # O(1) → remove last element
+    abc.pop(0)                       # O(n) → shifts elements
+    abc.remove(3)                    # O(n) → search + shift
+    del abc[2]                       # O(n)
 
-# ===============================
-# UPDATE
-# ===============================
+    # ===============================
+    # UPDATE
+    # ===============================
 
-abc[1] = 100                     # O(1) → direct replacement
+    abc[1] = 100                     # O(1) → direct replacement
 
-# ===============================
-# SIZE
-# ===============================
+    # ===============================
+    # SIZE
+    # ===============================
 
-len(abc)                         # O(1) → Python stores list size
+    len(abc)                         # O(1) → Python stores list size
 
-# ===============================
-# ITERATION
-# ===============================
+    # ===============================
+    # ITERATION
+    # ===============================
 
-for item in abc:                 # O(n)
-    pass
+    for item in abc:                 # O(n)
+        pass
 
-# ===============================
-# COPYING
-# ===============================
+    # ===============================
+    # COPYING
+    # ===============================
 
-abc_copy = abc.copy()             # O(n)
-abc_copy2 = abc[:]                # O(n)
-abc_copy3 = list(abc)             # O(n)
+    abc_copy = abc.copy()             # O(n)
+    abc_copy2 = abc[:]                # O(n)
+    abc_copy3 = list(abc)             # O(n)
 
-# ===============================
-# SORTING
-# ===============================
+    # ===============================
+    # SORTING
+    # ===============================
 
-abc.sort()                       # O(n log n) → Timsort
-sorted_abc = sorted(abc)         # O(n log n)
+    abc.sort()                       # O(n log n) → Timsort
+    sorted_abc = sorted(abc)         # O(n log n)
 
-# ===============================
-# REVERSE
-# ===============================
+    # ===============================
+    # REVERSE
+    # ===============================
 
-abc.reverse()                    # O(n)
+    abc.reverse()                    # O(n)
 
-# ===============================
-# CONCATENATION
-# ===============================
+    # ===============================
+    # CONCATENATION
+    # ===============================
 
-new_list = abc + [10, 11]         # O(n + m)
+    new_list = abc + [10, 11]         # O(n + m)
 
-# ===============================
-# CLEAR
-# ===============================
+    # ===============================
+    # CLEAR
+    # ===============================
 
-abc.clear()                      # O(n) → removes references
+    abc.clear()                      # O(n) → removes references
 
-# ===============================
-# COMPARISON
-# ===============================
+    # ===============================
+    # COMPARISON
+    # ===============================
 
-[1, 2, 3] == [1, 2, 3]            # O(n) → element-by-element comparison
+    [1, 2, 3] == [1, 2, 3]            # O(n) → element-by-element comparison
 
-# ===============================
-# COUNT
-# ===============================
+    # ===============================
+    # COUNT
+    # ===============================
 
-abc.count(2)                     # O(n)
+    abc.count(2)                     # O(n)
 
-# ===============================
-# MIN / MAX / SUM
-# ===============================
+    # ===============================
+    # MIN / MAX / SUM
+    # ===============================
 
-min(abc)                         # O(n)
-max(abc)                         # O(n)
-sum(abc)                         # O(n)
+    min(abc)                         # O(n)
+    max(abc)                         # O(n)
+    sum(abc)                         # O(n)
 
-```
+    ```
 
-### Summary 
+### Array Summary 
 
 * Arrays are a way of storing a collection of elements and efficiently accessing them by position. 
 * The term array is usually intended as a synonym for a statically-sized array (or "static array" for short), a collection of elements, accessed by an index, where the number of elements is fixed for the entire lifetime of the collection. 
@@ -201,4 +202,6 @@ sum(abc)                         # O(n)
 * It's possible to use arrays for many applications, for example counting items and computing statistics are perfect use cases for arrays. 
 
 ## Sorted Arrays 
+
+
 

@@ -82,8 +82,7 @@ nav:
         - 'Data Structures and Algorithms':
             - 'Big O Notation' : dev-notes/data-structures-algorithms/big-o-notation.md
             - 'Data Structures' : dev-notes/data-structures-algorithms/data-structures.md
-            - 'Python Data Structures': dev-notes/data-structures-algorithms/python-data-structures.ipynb
-
+            - 'Python Data Structures': dev-notes\data-structures-algorithms\python-data-structures.ipynb
 theme: 
     name: material
     languages: es
@@ -162,7 +161,10 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span # added
+      pygments_lang_class: true # added
   - pymdownx.inlinehilite
+  - pymdownx.superfences # added
   - pymdownx.snippets
   - pymdownx.mark
   - pymdownx.arithmatex:
