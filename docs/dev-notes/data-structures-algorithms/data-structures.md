@@ -203,5 +203,11 @@ abc = [1, 2, 3, 4, 5] # Python list (dynamic array)
 
 ## Sorted Arrays 
 
+...
 
+## Hash tables 
+In python Hash tables are dictionaries
+
+**key**: <br>
+**value**: <br>
 
