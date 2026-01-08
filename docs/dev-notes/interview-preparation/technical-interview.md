@@ -19,10 +19,11 @@ Show different strategies or methods that you can use to solve a problem, not li
 Ask yourself: What's the best I can do in this problem? 
 If you pose different solutions you can understand what you have to optimize, and you can get feedback for the recruiter.
 
-In this step you don't have to start to develop you just have to show your hipotesys about the best way to resolve the problem. when you start to talk with the interviewer about the possible ideas to solve the code you'll be able to get the more optimal solution, save time developing.  
+In this step you don't have to start to develop you just have to show your hypothesis about the best way to resolve the problem. when you start to talk with the interviewer about the possible ideas to solve the code you'll be able to get the more optimal solution, save time developing.  
 
 ## Step 5 Implement your solution 
 This step is the answer off all the other steps. take care about to implement a clean and syntactically correct solution
 
 ## Step 6 test your code. 
-Scan your code line by line amd make sure that you don't have logic error, undeclared variables, off by one issues
+Scan your code line by line amd make sure that you don't have logic error, undeclared variables, off by one issues.
+
