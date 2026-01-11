@@ -83,8 +83,10 @@ nav:
             - 'Overview': dev-notes/statistics/overview.ipynb
         - 'Control Theory': 
             - 'Overview': dev-notes/control-theory/overview.md
-        
-theme: 
+        - 'Interviews':
+            - 'Non technical interviews': dev-notes/interview-preparation/non-technical-interview.md
+            - 'Technical interviews': dev-notes/interview-preparation/technical-interview.md
+theme:    
     name: material
     languages: es
     custom_dir: assets

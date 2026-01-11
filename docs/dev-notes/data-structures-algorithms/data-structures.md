@@ -202,6 +202,60 @@ abc = [1, 2, 3, 4, 5] # Python list (dynamic array)
 * It's possible to use arrays for many applications, for example counting items and computing statistics are perfect use cases for arrays. 
 
 ## Sorted Arrays 
+A sorted array is an array whose elements are arranged in a specific order, usually ascending or descending. 
+
+**A sorted array is a contiguous structure that sacrifices update speed to gain fast search**
+
+**Order is enforced**: every element knows its position relative to others. 
+
+**Example (ascending)**
+```python
+[1, 3, 5, 8, 12]
+```
+
+**Example Descending:**
+```python
+[12, 8, 5, 3, 1]
+```
+
+### Why sorting matters 
+Once an array is sorted, you unlock **faster algorithms**.
+
+**Big win:** <br>
+• Binary Search -> O(log n) <br><br>
+**Without sorting:** <br>
+• Linear search -> O(n) <br><br>
+
+### Time complexity of operations 
+| Operation            | Complexity | Why              |
+| -------------------- | ---------- | ---------------- |
+| Access by index      | O(1)       | Array property   |
+| Search (binary)      | O(log n)   | Divide & conquer |
+| Insert (keep sorted) | O(n)       | Shift elements   |
+| Delete               | O(n)       | Shift elements   |
+
+
+### Sorted Array vs Unsorted Array
+| Feature          | Unsorted   | Sorted       |
+| ---------------- | ---------- | ------------ |
+| Search           | O(n)       | **O(log n)** |
+| Insert           | O(1) (end) | O(n)         |
+| Delete           | O(n)       | O(n)         |
+| Maintenance cost | Low        | Higher       |
+
+### Typical use cases
+* Binary search 
+* Range queries 
+* Two-pointer techniques
+* Merging datasets 
+* Deduplication
+
+### Summary 
+
+* A sorted Array is an array whose elements are kept in order as they change.
+* To maintain the elements of an array in order; we need a different approach when inserting and deleting elements. These methods must preserve the order nd therefore require more effort than their counterparts for unsorted arrays. 
+* On an already sorted array, we can run **binary search**, a search algorithm that can find a match by looking at fewer elements than **linear search** (which simply scans all elements until it finds a match). 
+* With sorted arrays, you have faster search, but you also have an extra cost to keep them sorted: therefore, they are to be preferred when there is a high read/write ratio (many more calls to the binary_search method than to insert and delete).
 
 ...
 
