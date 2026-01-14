@@ -76,6 +76,13 @@ Loop runs **n** times <br>
 ➜ Time: O(n) <br>
 ➜ Space: O(1) (only one variable) <br><br>
 
+## Using big-O notation to understand data structures
+
+
+## The difference between worst-case, average, and amortized analysis
+
+## 
+
 ## What can cause Time in a Function? 
 • Operations (+, -, /, ...) <br>
 • Comparisons (<, >, ==, ...) <br>

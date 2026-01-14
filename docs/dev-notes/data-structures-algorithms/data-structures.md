@@ -76,6 +76,16 @@ abc = [1, 2, 3, 4, 5] # Python list (dynamic array)
 | Memory overhead   | Minimal      | Extra capacity              |
 | Example           | `int a[10]`  | Python `list`, C++ `vector` |
 
+### Python Unsorted array 
+
+This code implements an unsorted array data structure with fixed maximum capacity, backed by a typed low-level array. 
+
+Unlike Python lists, this structure does not resize dynamically and does not preserve order, which allows some operations to be faster.
+
+
+
+repo_url: 'https://github.com/mlarocca/grokking_data_structures/blob/main/python/arrays/unsorted_array.py'
+
 
 ### Python List operation 
 
@@ -250,6 +260,9 @@ Once an array is sorted, you unlock **faster algorithms**.
 * Merging datasets 
 * Deduplication
 
+### Python Sorted Arrays Example: 
+
+
 ### Summary 
 
 * A sorted Array is an array whose elements are kept in order as they change.
@@ -264,4 +277,23 @@ In python Hash tables are dictionaries
 
 **key**: <br>
 **value**: <br>
+
+
+
+## Linked Lists 
+
+## Stacks 
+
+## Queues 
+
+## Sets 
+
+## Maps 
+
+## Binary Trees 
+
+## Heaps 
+
+## Graphs 
+
 

@@ -27,3 +27,36 @@ This step is the answer off all the other steps. take care about to implement a 
 ## Step 6 test your code. 
 Scan your code line by line amd make sure that you don't have logic error, undeclared variables, off by one issues.
 
+## Attributes  to improve 
+
+### General cognitive ability 
+How you learn, adapt and deal with hard problems in real life. 
+
+### Role-related knowledge
+Background, experience and skills that match with the position. 
+
+### Leadership 
+You have to work with others, so solitary wolfs are not really impressive, you have to be able to communicate with others efficiently and take responsability.
+
+### Matching
+You have to match with the empress, if you do not feel comfortable maybe you have to consider another option. 
+
+
+Object oriented design 
+API's
+corner cases 
+edge cases 
+end to end 
+integration 
+loaded performance 
+security tasks 
+basic discrete math problems 
+probability theory 
+combinatorial 
+operating systems: 
+    - process
+    - threads 
+    - concurrency issues 
+system design 
+
+
