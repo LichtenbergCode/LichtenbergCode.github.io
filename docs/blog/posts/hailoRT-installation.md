@@ -8,6 +8,12 @@ categories:
     - Hailo-8
     - Raspberry Pi
     - Linux
+tags: 
+    - technology
+    - ARM64
+    - IA
+authors: 
+    - alberto
 ---
 
 # HailoRT Installation for ARM Architecture in Docker

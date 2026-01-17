@@ -82,12 +82,11 @@ nav:
             - 'Overview': dev-notes/statistics/overview.ipynb
         - 'Control Theory': 
             - 'Overview': dev-notes/control-theory/overview.md
-        - 'Interviews':
-            - 'Non technical interviews': dev-notes/interview-preparation/non-technical-interview.md
-            - 'Technical interviews': dev-notes/interview-preparation/technical-interview.md
+        #- 'Interviews':
+        #    - 'Non technical interviews': dev-notes/interview-preparation/non-technical-interview.md
+        #    - 'Technical interviews': dev-notes/interview-preparation/technical-interview.md
     - 'Archieve': 
         - 'Index': blog/index.md
-        - 'firstpost': blog/posts/firstpost.md
         - 'HailoRT Installation in Ubuntu for ARM architecture': hailoRT-installation.md
 theme:  
     name: material
@@ -142,8 +141,8 @@ plugins:
     #- video
     - blog:
         blog_toc: true
-        #active_date_format: yyyy
-        #active_url_date_formar: yyyy
+        active_date_format: yyyy
+        active_url_date_formar: yyyy
         #categories_allowed:
         #  - Tech
         #  - ROS 2
@@ -152,16 +151,11 @@ plugins:
         #  - Raspberry Pi
         #  - Linux
         #  - IA
-        #post_url_format: "{slug}"
+        post_url_format: "{slug}"
+        authors_profiles: true
     
-    #- tags:
-    #    tags_file: tags.md
-extra: 
-    social:
-    - icon: fontawesome/brands/github-alt
-      link: https://github.com/LichtenbergCode
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/albertolombera21/
+    - tags:
+        tags_file: tags.md
 
 markdown_extensions:
   - admonition
@@ -182,6 +176,13 @@ markdown_extensions:
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra: 
+    social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/LichtenbergCode
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/albertolombera21/
 
 copyright: |
     &copy; 2025 <a href="https://github.com/LichtenbergCode" target="_blank" rel="noopener">Alberto Lombera</a>

@@ -19,7 +19,7 @@ hide:
     <img src="https://cdn.simpleicons.org/raspberrypi/3776AB" width="32" height="32", title="raspberryPi">
     <br>
     <button class="custom-btn" onclick="window.location.href='tello-leader-follower-scheme/tello-leader-follower-scheme/'">View</button>
-    <button class="custom-btn">GitHub</button>
+    <button class="custom-btn" onclick="window.location.href='https://github.com/LichtenbergCode/drone-tello-leader-follower'">GitHub</button>
   </div>
 </div>
 
@@ -34,7 +34,7 @@ hide:
     <img src="https://cdn.simpleicons.org/raspberrypi/3776AB" width="32" height="32" title="raspberryPi">
     <br>
     <button class="custom-btn" onclick="window.location.href='tello-pid-altitude/tello-pid-altitude-control/'">View</button>
-    <button class="custom-btn">GitHub</button>
+    <button class="custom-btn" onclick="window.location.href='https://github.com/LichtenbergCode/tello-pid-altitude-control-ros2'">GitHub</button>
   </div>
 </div>
 
@@ -50,6 +50,6 @@ hide:
     <img src="https://cdn.simpleicons.org/raspberrypi/3776AB" width="32" height="32" title="raspberryPi">
     <br>
     <button class="custom-btn" onclick="window.location.href='tello-control-gui/tello-control-gui/'">View</button>
-    <button class="custom-btn">GitHub</button>
+    <button class="custom-btn" onclick="window.location.href='https://github.com/LichtenbergCode/tello-gui-controller-ros2'">GitHub</button>
   </div>
 </div>
