@@ -42,9 +42,7 @@ nav:
     #- About: about.md 
 
     #icon: fontawesome/solid/user
-    #- My Blog Entries: blog.md
-    #- Blog: 
-    #    - What is robotics?: blog/what-is-robotics.md
+    #- My Blog Entries: blog.md        
     - Projects:
         - 'Start Here': projects/index.md
         - 'tello-leader-follower-scheme':
@@ -87,7 +85,11 @@ nav:
         - 'Interviews':
             - 'Non technical interviews': dev-notes/interview-preparation/non-technical-interview.md
             - 'Technical interviews': dev-notes/interview-preparation/technical-interview.md
-theme:    
+    - 'Archieve': 
+        - 'Index': blog/index.md
+        - 'firstpost': blog/posts/firstpost.md
+        - 'HailoRT Installation in Ubuntu for ARM architecture': hailoRT-installation.md
+theme:  
     name: material
     languages: es
     custom_dir: assets
@@ -139,18 +141,21 @@ plugins:
     - mkdocs-jupyter
     #- video
     - blog:
-        blog_dir: .
         blog_toc: true
-        active_date_format: yyyy
-        active_url_date_formar: yyyy
-        categories_allowed:
-          - Tech
-          - ROS 2
-          - Drone Control
-        post_url_format: "{slug}"
+        #active_date_format: yyyy
+        #active_url_date_formar: yyyy
+        #categories_allowed:
+        #  - Tech
+        #  - ROS 2
+        #  - Drone Control
+        #  - Hailo-8
+        #  - Raspberry Pi
+        #  - Linux
+        #  - IA
+        #post_url_format: "{slug}"
     
-    - tags:
-        tags_file: tags.md
+    #- tags:
+    #    tags_file: tags.md
 extra: 
     social:
     - icon: fontawesome/brands/github-alt
