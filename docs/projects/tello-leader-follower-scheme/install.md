@@ -26,7 +26,7 @@ sudo apt install -y curl wget git python3-pip
 
 Install: 
 ```bash
-wget https://s3.ap-northeast-1.wasabisys.com/download-raw/dpkg/ros2-desktop/debian/bookworm/ros-iron-desktop-0.3.2_20231028_arm64.deb
+git clone https://github.com/LichtenbergCode/ros-iron.git
 sudo apt install ./ros-iron-desktop-0.3.2_20231028_arm64.deb
 sudo pip install --break-system-packages vcstool colcon-common-extensions
 ```

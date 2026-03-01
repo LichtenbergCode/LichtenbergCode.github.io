@@ -282,13 +282,312 @@ In python Hash tables are dictionaries
 
 ## Linked Lists 
 
+A linked list is a linear data structure made of nodes where each node stores data and one or more pointers (references) to other nodes. Unlike arrays, nodes can be scattered in memory and are connected by these pointers. <br>
+
+**O Time Complexity**<br>
+prepend -> O(1) <br>
+append -> O(1) <br>
+lookup -> O(n) <br>
+insert -> O(n) <br>
+delete -> O(n) <br>
+
+
+**Node**: typically stores a value and a pointer/reference to another node (or two pointers for doubly linked lists).<br>
+**Head**: reference to the first node. <br>
+**Tail**: reference to the last node (optional but common).<br>
+**Traversal**: starts at head and follow next pointers until you reach the end (None) or come back to head for circular lists.<br> 
+**Variants**: 
+- Singly linked list: nodes have one pointer (next). Forward-only traversal. 
+- Doubly linked list: nodes have next and prev. pointers. Can traverse both directions. 
+- Circular linked list: last node points bask to the first (no null terminator). Can be singly or doubly circular. 
+- Sentinel (dummy) node: a special node used to simplify edge-case code (insert/remove at ends).
+
+
+### Singly-linked lists
+A singly-linked list is a linked list with a single link per node, pointing to the next element in the list.<br>
+
+The first element of a linked list is called its **head**, and the last element of the lis is called its **tail**. In a singly-linked list, the characteristic of a head node is that no other node points to it, and so we need to store a link to the beginning (aka head) of the list somewhere in a variable. <br>
+
+**Singly Linked List Template**
+```python 
+
+class Node: 
+    def __init__(self, value): 
+        self.value = value
+        self.next = None 
+
+class SinglyLinkedList: 
+    def __init__(self): 
+        self.head = None
+        self.tail = None # optional, for O(1) append
+    
+    def prepend(self, value): 
+        node = Node(value)
+        node.next = self.head
+        self.head = node 
+        if self.tail is None: 
+            self.tail = node
+        
+    def append(self, value): 
+        node = Noe(value)
+        if not self.head: 
+            self.head = self.tail = node
+        else: 
+            self.tail.next = node 
+            self.tail = node 
+    
+    def find(self, value): 
+        cur = self.head
+        while cur and cur.next: # Reads the value 
+            if cur.value == value: 
+                return cur 
+            cur = cur.next
+        return None
+    
+    def remove(self, value): 
+        prev = None
+        cur = self.head 
+        while cur: 
+```
+**Singly Linked List Explanation**
+* **Node**: simple container holding a value and reference to the next node. 
+* **SinglyLinkedList**: a chain of Node objects with references to the head (first) and tail (last) node. It supports O(1) prepend and append (because tail is tracked), searching (find), removal by value, and iteration.
+
+```python 
+class Node:  
+    def __init_(self, value): 
+        self.value = value 
+        self.next = None  
+```
+* Node.value: stores any Python object(number, string, another object, etc). 
+* Node.next: references to the next Node in the list (None means end-of-list).
+* Nodes themselves are simple and truthy object (useful later when checking prev). 
+```python
+class SinglyLinkedList: 
+    def __init__(self): 
+        self.head = None 
+        self.tail = None #optional, for O(1) append
+```
+* head: points to the first Node or None when the list is empty. 
+* tail: points to the last Node or None when empty. Maintaining tail lets append run un O(1).<br>
+
+**prepend** (insert at front)
+```python
+    def prepend(self, value): 
+        node = Node(value) # Creating a new Node 
+        node.next = self.head #  
+        self.head = node #  
+        if self.tail is None: #  
+            self.tail = node  # 
+```
+* Create a new node. 
+* Make its next point to current head (can be None).
+* Update head to the new node. 
+* If the 
+
+
+### Doubly-linked lists
+A doubly linked list is a linked data structure where each node stores a value and two pointers: one to the next node and one to the previous node: This allows traversal forward and backward, and enables O(1) removal or insertion at a known node (because you can access both neighbors directly) <br>
+
+**Time Complexity**
+* Access by index: O(n) 
+* Append (push back): O(1)
+* Prepend (push front): O(1)
+* Insert after / before a given node: O(1) (given the node)
+* Remove a given node: O(1) (given the node)
+* Find by value (search): O(n)
+* Pop front / pop back: O(1)
+* Iterate forward or backward: O(n) 
+
+**Doubly Linked List Template**
+```python
+class DNode:
+    def __init__(self, value):
+        self.value = value
+        self.prev = None
+        self.next = None
+
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+        self._size = 0
+
+    def __len__(self):
+        return self._size
+
+    def append(self, value):
+        node = DNode(value)
+        if not self.head:              # empty list
+            self.head = self.tail = node
+        else:
+            node.prev = self.tail
+            self.tail.next = node
+            self.tail = node
+        self._size += 1
+        return node
+
+    def prepend(self, value):
+        node = DNode(value)
+        if not self.head:
+            self.head = self.tail = node
+        else:
+            node.next = self.head
+            self.head.prev = node
+            self.head = node
+        self._size += 1
+        return node
+
+    def insert_after(self, node, value):
+        if node is None:
+            return self.prepend(value)
+        if node is self.tail:
+            return self.append(value)
+        new_node = DNode(value)
+        nxt = node.next
+        node.next = new_node
+        new_node.prev = node
+        new_node.next = nxt
+        nxt.prev = new_node
+        self._size += 1
+        return new_node
+
+    def remove_node(self, node):
+        if node is None:
+            return False
+        if node.prev:
+            node.prev.next = node.next
+        else:
+            self.head = node.next
+        if node.next:
+            node.next.prev = node.prev
+        else:
+            self.tail = node.prev
+        node.prev = node.next = None  # help GC / avoid accidental reuse
+        self._size -= 1
+        return True
+
+    def find(self, value):
+        cur = self.head
+        while cur:
+            if cur.value == value:
+                return cur
+            cur = cur.next
+        return None
+
+    def pop_front(self):
+        if not self.head:
+            raise IndexError("pop from empty list")
+        val = self.head.value
+        self.remove_node(self.head)
+        return val
+
+    def pop_back(self):
+        if not self.tail:
+            raise IndexError("pop from empty list")
+        val = self.tail.value
+        self.remove_node(self.tail)
+        return val
+
+    def __iter__(self):
+        cur = self.head
+        while cur:
+            yield cur.value
+            cur = cur.next
+
+    def iter_reverse(self):
+        cur = self.tail
+        while cur:
+            yield cur.value
+            cur = cur.prev
+
+    def to_list(self):
+        return list(self)
+```
+
+### Circular linked lists
+
+
 ## Stacks 
+A stack is a linear data structure that follows Last-in, First-Out (LIFO): the last item pushed is the first one popped. Core operations (push, pop, peek) are O(1) time in typical implementations. 
+
+* push (x): place x on top of the stack. 
+* pop (): remove and return the top element. 
+* Peek/Top(): Read the top element without removing it. 
+* is_empty(): test whether the stack has no elements. 
+* size(): number of elements.  
+
+**Stacks Template**
+```python 
+from typing import Iterable, TypeVar
+
+T = TypeVar("T", int, float) # generic variable
+
+class Stack:
+    def __init__(self, elements: Iterable[T] | None = None):
+        self._stack_elements: list[T] = []
+        self._min_elements: list[T] = []
+        self._number_of_elements = 0
+
+        if elements:
+            self.push_array(elements)
+
+    def push(self, element: T) -> None:
+        self._stack_elements.append(element)
+        self._number_of_elements += 1
+
+        if not self._min_elements:
+            self._min_elements.append(element)
+        else:
+            self._min_elements.append(min(element, self._min_elements[-1]))
+
+    def push_array(self, arr: Iterable[T]) -> None:
+        for i in arr:
+            self.push(i)
+
+    def pop(self) -> T | None:
+        if not self._stack_elements:
+            return None
+
+        self._min_elements.pop()
+        self._number_of_elements -= 1
+        return self._stack_elements.pop()
+
+    def peek(self) -> T | None:
+        if not self._stack_elements:
+            return None
+        return self._stack_elements[-1]
+
+    def min_element(self) -> T | None:
+        if not self._min_elements:
+            return None
+        return self._min_elements[-1]
+
+    def is_empty(self) -> bool:
+        return not self._stack_elements
+
+    def size(self) -> int:
+        return self._number_of_elements
+
+```
 
 ## Queues 
 
-## Sets 
+A queue is a linear data structure which models real world queues by having two primary operations, namely enqueue and dequeue. <br><br>
 
-## Maps 
+**Time Complexity**
+* Enqueue O(1)
+* Dequeue O(1)
+* Peeking O(1)
+* Contains O(n)
+* Removal O(n)
+* Is Empty O(1)
+
+### When to use a Queue 
+* Any waiting line models a queue, for example a lineup at a movie theatre.
+* Can be used to efficiently keep track of x most recently added elements.
+* Web server request management where you want first come first serve. 
+* Breadth first search (BFS) graph traversal. 
 
 ## Binary Trees 
 

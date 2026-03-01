@@ -65,23 +65,25 @@ nav:
             #- 'Features': projects/tello-control-gui/features.md
             #- 'Functionalities': projects/tello-control-gui/functionalities.md
             #- 'Architecture': projects/tello-control-gui/architecture.md
-    - 'Dev Notes':
-        - 'Data Structures and Algorithms':
-            - 'Big O Notation' : dev-notes/data-structures-algorithms/big-o-notation.md
-            - 'Edge Cases' :  dev-notes/data-structures-algorithms/edge-cases.md
-            - 'Data Structures' : dev-notes/data-structures-algorithms/data-structures.md
-            - 'Python Data Structures': dev-notes\data-structures-algorithms\python-data-structures.ipynb
-        - 'Linear Algebra':
-            - 'Overview': dev-notes/linear-algebra/overview.ipynb
-            - 'Vectors': dev-notes/linear-algebra/vectors.ipynb
-            - 'Vectors applied': dev-notes/linear-algebra/vectors_applied.ipynb
-            - 'Matrix': dev-notes/linear-algebra/matrix.ipynb
-            - 'Matrix applied': dev-notes/linear-algebra/matrix_applied.ipynb
-            #- etc...
-        - 'Statistics':
-            - 'Overview': dev-notes/statistics/overview.ipynb
-        - 'Control Theory': 
-            - 'Overview': dev-notes/control-theory/overview.md
+    #- 'Dev Notes':
+    #    - 'Data Structures and Algorithms':
+    #        - 'Big O Notation' : dev-notes/data-structures-algorithms/big-o-notation.md
+    #        - 'Edge Cases' :  dev-notes/data-structures-algorithms/edge-cases.md
+    #        - 'Data Structures' : dev-notes/data-structures-algorithms/data-structures.md
+    #        - 'Algorithms' : dev-notes/data-structures-algorithms/algorithms.md
+    #        - 'Practical DSA': dev-notes/data-structures-algorithms/practical-DSA.md
+    #        # - 'Python Data Structures': dev-notes\data-structures-algorithms\python-data-structures.ipynb
+    #    - 'Linear Algebra':
+    #        - 'Overview': dev-notes/linear-algebra/overview.ipynb
+    #        - 'Vectors': dev-notes/linear-algebra/vectors.ipynb
+    #        - 'Vectors applied': dev-notes/linear-algebra/vectors_applied.ipynb
+    #        - 'Matrix': dev-notes/linear-algebra/matrix.ipynb
+    #        - 'Matrix applied': dev-notes/linear-algebra/matrix_applied.ipynb
+    #        #- etc...
+    #    - 'Statistics':
+    #        - 'Overview': dev-notes/statistics/overview.ipynb
+    #    - 'Control Theory': 
+    #        - 'Overview': dev-notes/control-theory/overview.md
         #- 'Interviews':
         #    - 'Non technical interviews': dev-notes/interview-preparation/non-technical-interview.md
         #    - 'Technical interviews': dev-notes/interview-preparation/technical-interview.md
