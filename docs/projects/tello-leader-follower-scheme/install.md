@@ -26,10 +26,34 @@ sudo apt install -y curl wget git python3-pip
 
 Install: 
 ```bash
-git clone https://github.com/LichtenbergCode/ros-iron.git
-sudo apt install ./ros-iron-desktop-0.3.2_20231028_arm64.deb
+wget https://github.com/Ar-Ray-code/rpi-bullseye-ros2/releases/download/ros2-0.3.2/ros-iron-desktop-0.3.2_20230929_arm64.deb
+sudo apt install ./ros-iron-desktop-0.3.2_20230929_arm64.deb
+pip install --break-system-packages empy==3.3.4
 sudo pip install --break-system-packages vcstool colcon-common-extensions
+
+######
+sudo apt install -y git colcon python3-rosdep2 vcstool wget python3-flake8-docstrings python3-pip python3-pytest-cov python3-flake8-blind-except python3-flake8-builtins python3-flake8-class-newline python3-flake8-comprehensions python3-flake8-deprecated python3-flake8-import-order python3-flake8-quotes python3-pytest-repeat python3-pytest-rerunfailures python3-vcstools libx11-dev libxrandr-dev libasio-dev libtinyxml2-dev
+
+mkdir -p ~/ros2_iron/src
+
+cd ~/ros2_iron
+
+vcs import --input https://raw.githubusercontent.com/ros2/ros2/iron/ros2.repos src
+
+sudo rm /etc/ros/rosdep/sources.list.d/20-default.list
+
+sudo apt upgrade
+
+sudo rosdep init
+
+rosdep update
+
+rosdep install --from-paths src --ignore-src --rosdistro iron -y --skip-keys "fastcdr rti-connext-dds-6.0.1 urdfdom_headers python3-vcstool"
+
+colcon build --symlink-install
+
 ```
+
 
 Load ROS2: 
 ```bash
@@ -62,7 +86,7 @@ git clone https://github.com/ros-perception/vision_opencv.git -b iron
 Compile the package: 
 ```bash
 cd ../
-colcon build --symlink_install
+colcon build 
 ```
 activate the environment you just compiled: 
 ```bash
@@ -115,7 +139,7 @@ The Hailo-8 is specialized AI processor designed for high-performance, low-power
 
 update and upgrade the system: 
 ```bash
-sudo apt update && sudo apt full upgrade
+sudo apt update && sudo apt full-upgrade
 ```
 Install the complete Hailo AI software suite:
 ```bash
@@ -132,7 +156,7 @@ git clone https://github.com/hailo-ai/hailo-apps-infra.git
 cd hailo-apps-infra
 
 # Run the installer
-./install.sh
+sudo ./install.sh
 ```
 Setup environment: 
 ```bash
