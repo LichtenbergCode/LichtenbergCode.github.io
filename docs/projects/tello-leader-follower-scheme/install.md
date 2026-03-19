@@ -2,6 +2,8 @@ icon:fontawesome/solid/gear
 
 This sections provides comprehensive instructions for installing and configuring the **DJI Tello leader follower scheme** control system, it covers dependency installation, ROS 2 Iron setup, Hailo AI module integration and environment configuration. The guide supports **Raspberry Pi OS** on **Raspberry Pi 5** as the primary platform. 
 
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/Bzqk21_rMms?si=fxY_gCL4zExIHIqS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## System Requirements
 
 ### Hardware Requirements
@@ -15,10 +17,6 @@ Software Requirements
 * Additional: Git, pip, Python virtual environment
 
 ## Environment Setup: 
-
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/Bzqk21_rMms?si=fxY_gCL4zExIHIqS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
 
 ### Hailo Drivers Installation 
 

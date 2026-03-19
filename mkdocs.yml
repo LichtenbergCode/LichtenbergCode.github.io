@@ -87,9 +87,9 @@ nav:
         #- 'Interviews':
         #    - 'Non technical interviews': dev-notes/interview-preparation/non-technical-interview.md
         #    - 'Technical interviews': dev-notes/interview-preparation/technical-interview.md
-    - 'Archieve': 
-        - 'Index': blog/index.md
-        - 'HailoRT Installation in Ubuntu for ARM architecture': hailoRT-installation.md
+    #- 'Archieve': 
+    #    - 'Index': blog/index.md
+    #    - 'HailoRT Installation in Ubuntu for ARM architecture': hailoRT-installation.md
 theme:  
     name: material
     languages: es
