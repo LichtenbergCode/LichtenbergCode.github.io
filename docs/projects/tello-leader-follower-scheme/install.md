@@ -16,6 +16,10 @@ Software Requirements
 
 ## Environment Setup: 
 
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/Bzqk21_rMms?si=fxY_gCL4zExIHIqS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
 ### Hailo Drivers Installation 
 
 <img src="../img/installation/hailo8.png" alt="Hailo-8 accelerator" align="right" width=40%>
