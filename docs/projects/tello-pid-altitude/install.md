@@ -117,7 +117,7 @@ Compile the packages:
 ```bash
 colcon build
 ```
-!!! warning "Use ```colcon build``` only within your drone_altitude_ws workspace" 
+!!! warning "Use ```colcon build``` only within your ros workspace" 
 Activate the environment you just compiled: 
 ```bash
 source install/setup.bash
